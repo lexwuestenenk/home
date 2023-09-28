@@ -12,7 +12,7 @@ export default function Home() {
                 <h1
                     className="text-8xl text-blue-500 font-bold"
                 >
-                    Banaan
+                    Hier komt ooit iets
                 </h1>
             </div>
         </main>
