@@ -28,7 +28,7 @@ export default function Page404() {
                             404
                         </h1>
                         <p>
-                            Was je ergens anders naar op zoek?
+                            <a href="/">Terug naar homepagina -&gt;</a>
                         </p>
                     </div>
                 </div>

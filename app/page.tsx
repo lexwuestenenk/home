@@ -23,9 +23,9 @@ export default function Home() {
                 </div>
 
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="text-center">
+                    <div className="flex flex-col gap-3 text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-blue-500 sm:text-6xl">
-                            Hier komt ooit iets
+                            Ooit kom hier iets
                         </h1>
                     </div>
                 </div>
@@ -46,4 +46,3 @@ export default function Home() {
         </div>
     )
 }
-  
