@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link';
-import { CursorFollow, ShrinkCursor } from '@/components/sfx/cursor-follow';
+import { CursorFollow } from '@/components/sfx/cursor-follow';
 import { DotMatrix } from '@/components/sfx/dot-matrix';
 import { Icons } from '@/components/Icons';
 
