@@ -1,4 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link';
+import { CursorFollow, ShrinkCursor } from '@/components/sfx/cursor-follow';
+import { DotMatrix } from '@/components/sfx/dot-matrix';
+import { Icons } from '@/components/Icons';
 
 export const metadata: Metadata = {
     title: 'Lex Wuestenenk',
@@ -7,42 +11,39 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <div className='h-screen'>
-            <div className="bg-gray-200 h-full overflow-hidden relative isolate px-6 pt-14 lg:px-8">
-                <div
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                    aria-hidden="true"
-                >
-                    <div
-                        className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-blue-500 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                    />
+        <div className='bg-background h-screen flex justify-center items-center container select-none overflow-hidden'>
+            <CursorFollow />
+            <DotMatrix />
+            <div className='flex justify-between items-center w-full z-10'>
+                <div className='text-5xl'>
+                    <h1 className='text-text'>Lex</h1>
+                    <h1 className='text-primary'>Wuestenenk</h1>
                 </div>
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="flex flex-col gap-3 text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-blue-500 sm:text-6xl">
-                            Ooit kom hier iets
-                        </h1>
-                    </div>
-                </div>
-
-                <div
-                    className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                    aria-hidden="true"
-                >
-                    <div
-                        className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-blue-500 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                    />
+                <div className='text-2xl pr-2'>
+                    <ul>
+                        <li className='mb-3 text-text flex flex-row items-center gap-3 hover:cursor-pointer hover:text-secondary ease-in duration-200'>
+                            <Link href="/projects">Projects</Link>
+                        </li>
+                        <li className='mb-3 text-primary flex flex-row items-center gap-3 hover:cursor-pointer hover:text-secondary ease-in duration-200'>
+                            <Link href="/cv">Resume</Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+            <div className='absolute bottom-0 left-0 flex justify-between px-48 p-5 text-text w-full text-5xl'>
+                <Link href="https://github.com/lexwuestenenk" target='_blank'>
+                    <Icons.Github className="ease-in duration-200 hover:text-background" />
+                </Link>
+                <Link href="discordapp.com/users/299901733943902208" target='_blank'>
+                    <Icons.Discord className="ease-in duration-200 hover:text-background" />
+                </Link>
+                <Link href="https://www.linkedin.com/in/lex-wuestenenk-0b0340294/?locale=nl_NL" target='_blank'>
+                    <Icons.LinkedIn className="ease-in duration-200 hover:text-background" />
+                </Link>
+                <Link href="https://twitter.com/lexwuestenenk" target='_blank'>
+                    <Icons.Twitter className="ease-in duration-200 hover:text-background" />
+                </Link>
+            </div>
+        </div> 
     )
 }
