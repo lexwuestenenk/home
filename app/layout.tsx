@@ -16,7 +16,7 @@ export default function RootLayout({
   console.log(pathname)
 
   return (
-    <html lang="en">
+    <html lang="en" className='overflow-hidden'>
       <body className={inter.className + 'overflow-hidden'}>
         <ThemeProvider
           attribute="class"
