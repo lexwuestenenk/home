@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link';
 import { CursorFollow } from '@/components/sfx/cursor-follow';
-import { DotMatrix } from '@/components/sfx/dot-matrix';
 import { Icons } from '@/components/Icons';
 
 export const metadata: Metadata = {
@@ -24,7 +23,7 @@ export default function Home() {
                             <Link href="/projects">Projects</Link>
                         </li>
                         <li className='mb-3 text-primary flex flex-row items-center gap-3 hover:cursor-pointer hover:text-secondary ease-in duration-200'>
-                            <Link href="/cv">Resume</Link>
+                            <Link href="/resume">Resume</Link>
                         </li>
                     </ul>
                 </div>
