@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { DotMatrix } from '@/components/sfx/dot-matrix';
 import { CursorFollow } from '@/components/sfx/cursor-follow';
 import { Icons } from '@/components/Icons';
 import { Button } from '@/components/ui/button';
