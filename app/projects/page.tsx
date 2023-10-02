@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { CursorFollow } from '@/components/sfx/cursor-follow';
 import { Icons } from '@/components/Icons';
 import { Button } from '@/components/ui/button';
+import { SocialsBar } from '@/components/ui/socials-bar';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -11,103 +12,126 @@ export const metadata: Metadata = {
 
 export default function Projects() {
     return (
-        <div className='bg-background h-screen flex flex-col justify-center overflow-clip select-none'>
+        <div className='bg-background h-screen flex flex-col justify-center select-none'>
             <CursorFollow />
-            <div className='flex w-full pointer-events-none z-10'>
-                <Button asChild className='cursor-pointer pointer-events-auto bg-transparent w-1/8 border-2 border-primary hover:bg-transparent top-0 left-0 m-5 text-text'>
+            <div className='flex flex-row justify-between p-3 h-[6vh] border-primary sticky top-0 left-0'>
+                <Button asChild className='bg-transparent text-primary border-4 border-transparent hover:border-background hover:text-background hover:bg-transparent duration-300 ease-in'>
                     <Link href="/">
-                        Back to homepage
+                        <Icons.ChevronLeft />
                     </Link>
                 </Button>
-            </div>
-            <div className='flex flex-col md:flex-row overflow-scroll mb-[9vh] h-full justify-between md:justify-between items-center w-full z-10 pointer-events-none container'>
-                <div className='text-5xl mb-3'>
-                    <h1 className='text-text'>My</h1>
-                    <h1 className='text-primary'>Projects</h1>
-                </div>
-                <div className='flex flex-col gap-3 md:pt-[15vh]'>
-                    <Link href="# ">
-                        <div className='border-2 border-primary rounded-md p-3 m-3 max-w-md text-text bg-background ease-in duration-300 hover:bg-primary cursor-pointer pointer-events-auto'>
-                            <div className='flex flex-row justify-between gap-5'>
-                                <h2 className='text-3xl mb-3'>Portfolio</h2>
-                                <Icons.Link />
-                            </div>
-                            <p>
-                                The site you are looking at right now. I build this when I started hosting websites on my Raspberry Pi, so I had something to host and could practice a bit of frontend. 
-                            </p>
-                        </div>
-                    </Link>
-                    <Link href="#">
-                        <div className='border-2 border-primary rounded-md p-3 m-3 max-w-md text-text bg-background ease-in duration-300 hover:bg-primary cursor-pointer pointer-events-auto'>
-                            <div className='flex flex-row justify-between gap-5'>
-                                <h2 className='text-3xl mb-3'>Portfolio</h2>
-                                <Icons.Link />
-                            </div>
-                            <p>
-                                The site you are looking at right now. I build this when I started hosting websites on my Raspberry Pi, so I had something to host and could practice a bit of frontend. 
-                            </p>
-                        </div>
-                    </Link>
-                    <Link href="#">
-                        <div className='border-2 border-primary rounded-md p-3 m-3 max-w-md text-text bg-background ease-in duration-300 hover:bg-primary cursor-pointer pointer-events-auto'>
-                            <div className='flex flex-row justify-between gap-5'>
-                                <h2 className='text-3xl mb-3'>Portfolio</h2>
-                                <Icons.Link />
-                            </div>
-                            <p>
-                                The site you are looking at right now. I build this when I started hosting websites on my Raspberry Pi, so I had something to host and could practice a bit of frontend. 
-                            </p>
-                        </div>
-                    </Link>
-                    <Link href="#">
-                        <div className='border-2 border-primary rounded-md p-3 m-3 max-w-md text-text bg-background ease-in duration-300 hover:bg-primary cursor-pointer pointer-events-auto'>
-                            <div className='flex flex-row justify-between gap-5'>
-                                <h2 className='text-3xl mb-3'>Portfolio</h2>
-                                <Icons.Link />
-                            </div>
-                            <p>
-                                The site you are looking at right now. I build this when I started hosting websites on my Raspberry Pi, so I had something to host and could practice a bit of frontend. 
-                            </p>
-                        </div>
-                    </Link>
-                    <Link href="#">
-                        <div className='border-2 border-primary rounded-md p-3 m-3 max-w-md text-text bg-background ease-in duration-300 hover:bg-primary cursor-pointer pointer-events-auto'>
-                            <div className='flex flex-row justify-between gap-5'>
-                                <h2 className='text-3xl mb-3'>Portfolio</h2>
-                                <Icons.Link />
-                            </div>
-                            <p>
-                                The site you are looking at right now. I build this when I started hosting websites on my Raspberry Pi, so I had something to host and could practice a bit of frontend. 
-                            </p>
-                        </div>
-                    </Link>
-                    <Link href="#">
-                        <div className='border-2 border-primary rounded-md p-3 m-3 max-w-md text-text bg-background ease-in duration-300 hover:bg-primary cursor-pointer pointer-events-auto'>
-                            <div className='flex flex-row justify-between gap-5'>
-                                <h2 className='text-3xl mb-3'>Portfolio</h2>
-                                <Icons.Link />
-                            </div>
-                            <p>
-                                The site you are looking at right now. I build this when I started hosting websites on my Raspberry Pi, so I had something to host and could practice a bit of frontend. 
-                            </p>
-                        </div>
-                    </Link>
+                <div className='flex flex-row'>
+                    <h1 className='md:text-transparent text-center text-text align-right flex items-center text-3xl'>My</h1>
+                    <h1 className='md:text-transparent text-center text-primary align-right flex items-center text-3xl pr-3'>&nbsp;Projects</h1>
                 </div>
             </div>
-            <div className='fixed bottom-0 left-0 flex justify-between px-12 lg:px-48 p-5 text-text w-full text-5xl'>
-                <Link href="https://github.com/lexwuestenenk" target='_blank'>
-                    <Icons.Github className="ease-in duration-200 hover:text-background" />
-                </Link>
-                <Link href="discordapp.com/users/299901733943902208" target='_blank'>
-                    <Icons.Discord className="ease-in duration-200 hover:text-background" />
-                </Link>
-                <Link href="https://www.linkedin.com/in/lex-wuestenenk-0b0340294/?locale=nl_NL" target='_blank'>
-                    <Icons.LinkedIn className="ease-in duration-200 hover:text-background" />
-                </Link>
-                <Link href="https://twitter.com/lexwuestenenk" target='_blank'>
-                    <Icons.Twitter className="ease-in duration-200 hover:text-background" />
-                </Link>
+            <div className='flex grow md:flex-row flex-col justify-between z-10 container h-[82vh]'>
+                <div className='text-5xl my-auto sticky text-center text-start pb-3'>
+                    <h1 className='hidden md:block md:text-text'>My</h1>
+                    <h1 className='hidden md:block md:text-primary'>Projects</h1>
+                </div>
+                <div className='md:w-2/4 flex flex-col gap-3 overflow-scroll px-5'>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                    <div className='p-3 border-primary border-2 rounded-lg hover:bg-primary ease-in duration-300'>
+                        <div className='flex flex-row justify-between items-center pb-3'>
+                            <h2 className='text-2xl text-text'>Portfolio</h2>
+                            <Icons.Link className="text-xl text-text" />
+                        </div>
+                        <p className='text-text'>The project you are looking at right now.</p>
+                    </div>
+                </div>
             </div>
+            <SocialsBar />
         </div> 
     )
 }
